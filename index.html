@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roupas.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Roupas.com</h1>
+        <h2>As roupas mais baratas da rede</h2>
+    </header>
+
+    <main>
+       <h2>Nunca foi tão fácil encontrar as melhores roupas!</h2>
+       <p>Nossa loja oferece as melhores opções of roupas com os melhores preços do mercado. </p>
+       <p>Com um único pagamento, você pode acessar todas as nossas roupas! É simples: é só fazer um cadastro e nunca mais vão reparar que você usa a mesma roupa todo dia</p>
+
+       <!-- Botão que controla a abertura do cadastro flutuante -->
+       <button id="btnAbrirCadastro">Cadastrar</button>
+    </main>
+
+    <!-- JANELA FLUTUANTE PREMIUM (MODAL) -->
+    <div id="modalCadastro" class="modal-overlay">
+        <div class="modal-card">
+            <span id="btnFecharCadastro" class="botao-fechar">&times;</span>
+            <!-- Carrega o seu segundo HTML de forma isolada e limpa -->
+            <iframe src="cadastro.html" frameborder="0" class="iframe-cadastro"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Roupas.com. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script exclusivo da página inicial para exibir e ocultar a janela -->
+    <script>
+        const modal = document.getElementById('modalCadastro');
+        const btnAbrir = document.getElementById('btnAbrirCadastro');
+        const btnFechar = document.getElementById('btnFecharCadastro');
+
+        // Mostra a janela flutuante ao clicar em Cadastrar
+        btnAbrir.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+
+        // Esconde a janela ao clicar no "X"
+        btnFechar.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Esconde a janela se o usuário clicar no fundo escuro fora dela
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

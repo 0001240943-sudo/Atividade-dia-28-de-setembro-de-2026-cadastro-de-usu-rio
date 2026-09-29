@@ -1,0 +1,136 @@
+/* ==========================================================================
+   ESTILO DA PÁGINA PRINCIPAL (PALETA MINIMALISTA BORDÔ)
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F6ECEB; /* Off-white */
+    color: #3A0B12; /* Grafite escuro */
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #6A1424; /* Bordô principal */
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+header h2 {
+    font-weight: 400;
+    color: #8C5B61;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+main {
+    max-width: 550px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(106, 20, 36, 0.04);
+}
+
+main h2 { font-size: 1.5rem; margin-top: 0; }
+main p { color: #5A4548; line-height: 1.6; font-size: 1rem; margin-bottom: 35px; }
+
+/* Estilo do Botão Cadastrar da Página Principal */
+#btnAbrirCadastro {
+    background-color: #3A0B12; /* Cor escura original do seu print */
+    color: #ffffff;
+    border: none;
+    padding: 16px 45px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+#btnAbrirCadastro:hover {
+    background-color: #6A1424; /* Vira bordô ao passar o mouse */
+    transform: translateY(-1px);
+}
+
+footer p { color: #C9B3A7; font-size: 0.85rem; margin-top: 60px; }
+
+
+/* ==========================================================================
+   DESIGN DA JANELA FLUTUANTE PREMIUM (MODAL COM IFRAME)
+   ========================================================================== */
+
+/* Fundo escuro translúcido com desfoque de vidro (Premium) */
+.modal-overlay {
+    display: none; /* Começa invisível, aparece apenas ao clicar */
+    position: fixed; /* Trava por cima da tela inteira, ignorando rolagens */
+    z-index: 10000; /* Fica na frente de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 11, 18, 0.4); /* Sombra suave em grafite */
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px); /* Desfoca elegantemente o fundo do site */
+    animation: surgimentoSuave 0.3s ease-out;
+}
+
+/* Card centralizado flutuante */
+.modal-card {
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centralização matemática perfeita */
+    border-radius: 24px; /* Cantos arredondados modernos */
+    width: 90%;
+    max-width: 480px; /* Janela menor que a principal */
+    box-shadow: 0 20px 50px rgba(58, 11, 18, 0.25);
+    border: 1px solid #EFE7E6;
+    box-sizing: border-box;
+}
+
+/* iframe ajustado para moldura interna */
+.iframe-cadastro {
+    width: 100%;
+    height: 80vh; /* Ocupa 80% da altura da tela sem deformar */
+    border-radius: 24px;
+    display: block;
+}
+
+/* Ícone "X" de Fechar elegante */
+.botao-fechar {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #C9B3A7; /* Tom areia discreto */
+    z-index: 10002; /* Fica acima da página interna do iframe */
+    user-select: none;
+    transition: color 0.2s;
+}
+
+.botao-fechar:hover {
+    color: #6A1424; /* Fica bordô aceso */
+}
+
+/* Animação simples de fade-in */
+@keyframes surgimentoSuave {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ==========================================================================
+   AJUSTES ISOLADOS PARA O SEU SEGUNDO ARQUIVO (CADASTRO.HTML)
+   ========================================================================== */
+.body-cadastro {
+    background-color: #ffffff !important;
+    text-align: left !important;
+    padding: 30px !important;
+    margin: 0;
+}

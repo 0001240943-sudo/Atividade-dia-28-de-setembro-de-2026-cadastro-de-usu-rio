@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form id="formCadastro">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required> <br> <br
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>  <br> <br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>  <br> <br>
+
+        <label for="endereço">Endereço:</label>
+        <input type="text" id="endereço" name="endereço" required> <br> <br>
+
+        <label for="cpf">CPF (somente números):</label>
+        <input type="text" id="cpf" name="cpf" inputmode="numeric" pattern="\d{11}" title="O CPF deve conter exatamente 11 números" maxlength="11" required> <br> <br>
+
+
+        <label for="img">Imagem:</label>
+        <input type="file" id="img" name="img" accept="image/*" required> <br> <br>
+         <img id="preview" src="#" alt="Pré-visualização" style="display: none; max-width: 200px; margin-bottom: 20px; border-radius: 8px;"> <br>
+        
+
+        <button type="submit">Cadastrar</button>
+    
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>
